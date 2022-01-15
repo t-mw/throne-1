@@ -1,0 +1,41 @@
+[package]
+name = "throne"
+version = "0.4.1"
+description = "Scripting language for game prototyping and story logic"
+authors = ["xkbc24 <abhi.aadi219@gmail.com>"]
+repository = "https://github.com/xkbc24/throne"
+readme = "README.md"
+keywords = ["script", "scripting", "game", "language"]
+categories = ["game-development"]
+license = "MIT"
+edition = "2018"
+exclude = ["todo.org"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+itertools = "0.10"
+lazy_static = "1.4"
+pest = "2.1"
+pest_derive = "2.1"
+rand = { version = "0.8", features = ["small_rng"] }
+regex = "1.4"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dev-dependencies]
+criterion = "0.3"
+minifb = "0.19"
+pretty_assertions = "0.7"
+
+[target.wasm32-unknown-unknown.dependencies]
+console_error_panic_hook = "0.1"
+getrandom = { version = "0.2", features = ["js"] }
+js-sys = "0.3"
+wasm-bindgen = "0.2"
+
+[target.wasm32-unknown-unknown.dev-dependencies]
+wasm-bindgen-test = "0.3"
+
+[[bench]]
+name = "benchmark"
+harness = false
