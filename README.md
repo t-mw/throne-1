@@ -25,7 +25,6 @@ As described in [this](https://brunodias.dev/2017/05/05/inform-prototyping.html)
 Throne allows gameplay logic to be defined through rules and so provides some of the benefits of a rule-based language like Inform, but is also fast to execute and easy to embed in an existing engine. Its rule syntax and mechanics began as simplified versions of those found in the [Ceptre](https://www.cs.cmu.edu/~cmartens/ceptre.pdf) programming language, which was the main influence for the design of Throne.
 
 ## Examples
-- [throne-playground](https://github.com/xkbc/throne-playground-suite) - a web-based editor for Throne, made possible by compiling Throne to WebAssembly.
 - [blocks](examples/blocks.throne) - a simple tile matching game run with `cargo run --example blocks`.
 
 ## Reference
